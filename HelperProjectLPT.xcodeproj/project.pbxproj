@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		232598452755120800BF3018 /* HelperProjectLPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232598442755120800BF3018 /* HelperProjectLPTApp.swift */; };
-		232598472755120800BF3018 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232598462755120800BF3018 /* ContentView.swift */; };
+		232598472755120800BF3018 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232598462755120800BF3018 /* ExerciseListView.swift */; };
 		232598492755120900BF3018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232598482755120900BF3018 /* Assets.xcassets */; };
 		2325984C2755120900BF3018 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2325984B2755120900BF3018 /* Preview Assets.xcassets */; };
+		237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C7275512A4008E7650 /* ExerciseRowView.swift */; };
+		237924CA2755133D008E7650 /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C92755133D008E7650 /* UIKitView.swift */; };
+		237924CC2755155A008E7650 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924CB2755155A008E7650 /* RectangleCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		232598412755120800BF3018 /* HelperProjectLPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelperProjectLPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		232598442755120800BF3018 /* HelperProjectLPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperProjectLPTApp.swift; sourceTree = "<group>"; };
-		232598462755120800BF3018 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		232598462755120800BF3018 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
 		232598482755120900BF3018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2325984B2755120900BF3018 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		237924C7275512A4008E7650 /* ExerciseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRowView.swift; sourceTree = "<group>"; };
+		237924C92755133D008E7650 /* UIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitView.swift; sourceTree = "<group>"; };
+		237924CB2755155A008E7650 /* RectangleCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 			isa = PBXGroup;
 			children = (
 				232598432755120800BF3018 /* HelperProjectLPT */,
+				237924CB2755155A008E7650 /* RectangleCard.swift */,
 				232598422755120800BF3018 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,9 +59,11 @@
 			isa = PBXGroup;
 			children = (
 				232598442755120800BF3018 /* HelperProjectLPTApp.swift */,
-				232598462755120800BF3018 /* ContentView.swift */,
+				232598462755120800BF3018 /* ExerciseListView.swift */,
 				232598482755120900BF3018 /* Assets.xcassets */,
 				2325984A2755120900BF3018 /* Preview Content */,
+				237924C7275512A4008E7650 /* ExerciseRowView.swift */,
+				237924C92755133D008E7650 /* UIKitView.swift */,
 			);
 			path = HelperProjectLPT;
 			sourceTree = "<group>";
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				232598472755120800BF3018 /* ContentView.swift in Sources */,
+				237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */,
+				232598472755120800BF3018 /* ExerciseListView.swift in Sources */,
 				232598452755120800BF3018 /* HelperProjectLPTApp.swift in Sources */,
+				237924CC2755155A008E7650 /* RectangleCard.swift in Sources */,
+				237924CA2755133D008E7650 /* UIKitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

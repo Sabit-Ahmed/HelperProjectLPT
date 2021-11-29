@@ -11,7 +11,7 @@ import SwiftUI
 struct HelperProjectLPTApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ExerciseListView()
         }
     }
 }
