@@ -13,29 +13,39 @@ struct ExerciseListView: View {
     
     var body: some View {
         
-        NavigationView {
-            GeometryReader { geo in
-                ScrollView {
-                    LazyVStack(alignment: .leading, spacing: 15) {
-                        ForEach(exerciseList, id: \.self) { exercise in
-                            ZStack {
-                                Rectangle()
-                                    .foregroundColor(.white)
-                                    .cornerRadius(10)
-                                    .shadow(radius: 5)
-                                    .frame(width: geo.size.width - 20, height: 170, alignment: .center)
-                                
-                                ExerciseRowView()
+        VStack(alignment: .leading) {
+            Text("Exercise List")
+                .bold()
+                .font(.largeTitle)
+                .padding(.top)
+                .padding(.leading, 10)
+                
+            
+            NavigationView {
+                GeometryReader { geo in
+                    ScrollView {
+                        LazyVStack(alignment: .leading, spacing: 15) {
+                            ForEach(exerciseList, id: \.self) { exercise in
+                                ZStack {
+                                    Rectangle()
+                                        .foregroundColor(.white)
+                                        .cornerRadius(10)
+                                        .shadow(radius: 5)
+                                        .frame(width: geo.size.width - 20, height: 170, alignment: .center)
+                                    
+                                    ExerciseRowView()
+                                }
+                                    
                             }
-                                
+                            .navigationBarHidden(true)
                         }
-                        .navigationTitle("Exercise List")
                     }
+                    
+                    
                 }
-                
-                
             }
         }
+        
         
     }
     
