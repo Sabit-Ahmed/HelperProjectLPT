@@ -9,26 +9,22 @@ import SwiftUI
 
 struct AssessmentRowView: View {
     var body: some View {
-        NavigationLink(destination: UIKitView(),
-                       label: {
-            ZStack(alignment: .leading) {
-                RectangleCard(color: .white)
-                    .frame(height: 100)
-                    .cornerRadius(5)
-                    .shadow(radius: 5)
-                
-                VStack(alignment: .leading, spacing: 5) {
-                    Text("Test ID: TEST-16643")
-                        .bold()
-                    
-                    Text("Exercise Count: 44")
-                }
-                .padding(.leading)
-                   
-            }
+        
+        ZStack(alignment: .leading) {
+            RectangleCard(color: .white)
+                .frame(height: 100)
+                .cornerRadius(5)
+                .shadow(radius: 5)
             
-        })
-            .foregroundColor(.black)
+            VStack(alignment: .leading, spacing: 5) {
+                Text("Test ID: TEST-16643")
+                    .bold()
+                
+                Text("Exercise Count: 44")
+            }
+            .padding(.leading)
+               
+        }
         
     }
 }
