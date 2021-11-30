@@ -13,29 +13,49 @@ struct RectangleCardUpper: View {
             RectangleCard()
                 .frame(height: 250)
             
-            HStack(spacing: 25) {
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 95, height: 95)
-                    .clipped()
+            VStack {
+                HStack {
+                    Spacer()
+                    Image(systemName: "list.bullet")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .foregroundColor(.white)
                     
-                VStack(alignment: .leading, spacing: 5) {
-                    Text("MyMedicalHUB")
+                    Spacer()
+                    Text("EMMA Virtual Therapist")
                         .font(.title)
+                        .bold()
                         .foregroundColor(.white)
-                    
-                    Text("Hello Hanif Thakur")
-                        .foregroundColor(.white)
-                    
-                    Text("I'm EMMA")
-                        .foregroundColor(.white)
-                    
-                    Text("Your personal exercise assistant")
-                        .foregroundColor(.white)
+                    Spacer()
                 }
+                .padding(.top, 25)
+                
+                HStack(spacing: 25) {
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 95, height: 95)
+                        .clipped()
+                        .foregroundColor(.white)
+                        
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("MyMedicalHUB")
+                            .font(.title)
+                            .foregroundColor(.white)
+                        
+                        Text("Hello Hanif Thakur")
+                            .foregroundColor(.white)
+                        
+                        Text("I'm EMMA")
+                            .foregroundColor(.white)
+                        
+                        Text("Your personal exercise assistant")
+                            .foregroundColor(.white)
+                    }
+                }
+                .padding()
             }
-            .padding()
+            
             
         }
 
