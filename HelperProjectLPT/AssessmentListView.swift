@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AssessmentListView: View {
+    @State var isActive: Bool = false
     var exerciseList = ["Exercise 1","Exercise 2","Exercise 3"]
     
     var body: some View {
@@ -29,9 +30,14 @@ struct AssessmentListView: View {
                         LazyVStack(spacing: 0) {
                             ForEach(exerciseList, id: \.self) { exercise in
                                 NavigationLink(destination: ExerciseListView(),
+                                               isActive: $isActive,
                                                label: {
                                     AssessmentRowView()
                                 })
+                                    
+                            }
+                            .onDisappear {
+                                isActive = true
                             }
                             .foregroundColor(.black)
                             .navigationBarHidden(true)
