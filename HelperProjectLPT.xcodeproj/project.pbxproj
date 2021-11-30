@@ -14,6 +14,8 @@
 		23578CF12756516F00260FC0 /* RectangleCardUpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF02756516F00260FC0 /* RectangleCardUpper.swift */; };
 		23578CF32756520F00260FC0 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF22756520F00260FC0 /* RectangleCard.swift */; };
 		23578CF52756688B00260FC0 /* RectangleCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF42756688B00260FC0 /* RectangleCardRow.swift */; };
+		23578CF72756710B00260FC0 /* AssessmentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF62756710B00260FC0 /* AssessmentListView.swift */; };
+		23578CFB2756713100260FC0 /* AssessmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CFA2756713100260FC0 /* AssessmentRowView.swift */; };
 		237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C7275512A4008E7650 /* ExerciseRowView.swift */; };
 		237924CA2755133D008E7650 /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C92755133D008E7650 /* UIKitView.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,8 @@
 		23578CF02756516F00260FC0 /* RectangleCardUpper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardUpper.swift; sourceTree = "<group>"; };
 		23578CF22756520F00260FC0 /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 		23578CF42756688B00260FC0 /* RectangleCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardRow.swift; sourceTree = "<group>"; };
+		23578CF62756710B00260FC0 /* AssessmentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentListView.swift; sourceTree = "<group>"; };
+		23578CFA2756713100260FC0 /* AssessmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentRowView.swift; sourceTree = "<group>"; };
 		237924C7275512A4008E7650 /* ExerciseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRowView.swift; sourceTree = "<group>"; };
 		237924C92755133D008E7650 /* UIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,14 +66,15 @@
 			isa = PBXGroup;
 			children = (
 				232598442755120800BF3018 /* HelperProjectLPTApp.swift */,
-				232598482755120900BF3018 /* Assets.xcassets */,
-				2325984A2755120900BF3018 /* Preview Content */,
 				23578CF22756520F00260FC0 /* RectangleCard.swift */,
 				23578CF42756688B00260FC0 /* RectangleCardRow.swift */,
 				23578CF02756516F00260FC0 /* RectangleCardUpper.swift */,
 				237924C7275512A4008E7650 /* ExerciseRowView.swift */,
 				232598462755120800BF3018 /* ExerciseListView.swift */,
 				237924C92755133D008E7650 /* UIKitView.swift */,
+				2325984A2755120900BF3018 /* Preview Content */,
+				23578CF62756710B00260FC0 /* AssessmentListView.swift */,
+				23578CFA2756713100260FC0 /* AssessmentRowView.swift */,
 			);
 			path = HelperProjectLPT;
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 		2325984A2755120900BF3018 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				232598482755120900BF3018 /* Assets.xcassets */,
 				2325984B2755120900BF3018 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -155,10 +161,12 @@
 				237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */,
 				232598472755120800BF3018 /* ExerciseListView.swift in Sources */,
 				23578CF32756520F00260FC0 /* RectangleCard.swift in Sources */,
+				23578CF72756710B00260FC0 /* AssessmentListView.swift in Sources */,
 				23578CF12756516F00260FC0 /* RectangleCardUpper.swift in Sources */,
 				232598452755120800BF3018 /* HelperProjectLPTApp.swift in Sources */,
 				237924CA2755133D008E7650 /* UIKitView.swift in Sources */,
 				23578CF52756688B00260FC0 /* RectangleCardRow.swift in Sources */,
+				23578CFB2756713100260FC0 /* AssessmentRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
