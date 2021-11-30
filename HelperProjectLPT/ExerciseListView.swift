@@ -21,30 +21,25 @@ struct ExerciseListView: View {
                 Text("Exercise List")
                     .bold()
                     .font(.title)
-                    .padding(.leading, 20)
-                    
-                    
+                    .padding(.leading, 15)
                 
-                GeometryReader { geo in
-                    NavigationView {
+                NavigationView {
+                    
+                    ScrollView {
                         
-                        ScrollView {
-                            
-                            LazyVStack(spacing: 0) {
-                                ForEach(exerciseList, id: \.self) { exercise in
-                                    ExerciseRowView(width: geo.size.width)
-                                }
-                                .navigationBarHidden(true)
+                        LazyVStack(spacing: 0) {
+                            ForEach(exerciseList, id: \.self) { exercise in
+                                ExerciseRowView()
                             }
-                            
+                            .navigationBarHidden(true)
                         }
+                        
                     }
                 }
+                
             }
             
         }
-    
-        
         
     }
     

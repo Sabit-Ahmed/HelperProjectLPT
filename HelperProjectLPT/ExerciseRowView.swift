@@ -9,12 +9,10 @@ import SwiftUI
 
 struct ExerciseRowView: View {
     
-    var width: CGFloat = 350
-    
     var body: some View {
         
         ZStack {
-            RectangleCardCommon(width: self.width)
+            RectangleCardRow()
             
             HStack (spacing: 10) {
                 Spacer()

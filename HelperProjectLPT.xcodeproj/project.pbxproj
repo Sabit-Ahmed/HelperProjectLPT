@@ -12,10 +12,10 @@
 		232598492755120900BF3018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232598482755120900BF3018 /* Assets.xcassets */; };
 		2325984C2755120900BF3018 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2325984B2755120900BF3018 /* Preview Assets.xcassets */; };
 		23578CF12756516F00260FC0 /* RectangleCardUpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF02756516F00260FC0 /* RectangleCardUpper.swift */; };
-		23578CF32756520F00260FC0 /* RectangleCardCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF22756520F00260FC0 /* RectangleCardCommon.swift */; };
+		23578CF32756520F00260FC0 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF22756520F00260FC0 /* RectangleCard.swift */; };
+		23578CF52756688B00260FC0 /* RectangleCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF42756688B00260FC0 /* RectangleCardRow.swift */; };
 		237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C7275512A4008E7650 /* ExerciseRowView.swift */; };
 		237924CA2755133D008E7650 /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C92755133D008E7650 /* UIKitView.swift */; };
-		237924CC2755155A008E7650 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924CB2755155A008E7650 /* RectangleCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +25,10 @@
 		232598482755120900BF3018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2325984B2755120900BF3018 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23578CF02756516F00260FC0 /* RectangleCardUpper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardUpper.swift; sourceTree = "<group>"; };
-		23578CF22756520F00260FC0 /* RectangleCardCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardCommon.swift; sourceTree = "<group>"; };
+		23578CF22756520F00260FC0 /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
+		23578CF42756688B00260FC0 /* RectangleCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardRow.swift; sourceTree = "<group>"; };
 		237924C7275512A4008E7650 /* ExerciseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRowView.swift; sourceTree = "<group>"; };
 		237924C92755133D008E7650 /* UIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitView.swift; sourceTree = "<group>"; };
-		237924CB2755155A008E7650 /* RectangleCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,14 +62,14 @@
 			isa = PBXGroup;
 			children = (
 				232598442755120800BF3018 /* HelperProjectLPTApp.swift */,
-				232598462755120800BF3018 /* ExerciseListView.swift */,
 				232598482755120900BF3018 /* Assets.xcassets */,
 				2325984A2755120900BF3018 /* Preview Content */,
-				237924C7275512A4008E7650 /* ExerciseRowView.swift */,
-				237924C92755133D008E7650 /* UIKitView.swift */,
-				237924CB2755155A008E7650 /* RectangleCard.swift */,
+				23578CF22756520F00260FC0 /* RectangleCard.swift */,
+				23578CF42756688B00260FC0 /* RectangleCardRow.swift */,
 				23578CF02756516F00260FC0 /* RectangleCardUpper.swift */,
-				23578CF22756520F00260FC0 /* RectangleCardCommon.swift */,
+				237924C7275512A4008E7650 /* ExerciseRowView.swift */,
+				232598462755120800BF3018 /* ExerciseListView.swift */,
+				237924C92755133D008E7650 /* UIKitView.swift */,
 			);
 			path = HelperProjectLPT;
 			sourceTree = "<group>";
@@ -154,11 +154,11 @@
 			files = (
 				237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */,
 				232598472755120800BF3018 /* ExerciseListView.swift in Sources */,
-				23578CF32756520F00260FC0 /* RectangleCardCommon.swift in Sources */,
+				23578CF32756520F00260FC0 /* RectangleCard.swift in Sources */,
 				23578CF12756516F00260FC0 /* RectangleCardUpper.swift in Sources */,
 				232598452755120800BF3018 /* HelperProjectLPTApp.swift in Sources */,
-				237924CC2755155A008E7650 /* RectangleCard.swift in Sources */,
 				237924CA2755133D008E7650 /* UIKitView.swift in Sources */,
+				23578CF52756688B00260FC0 /* RectangleCardRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
