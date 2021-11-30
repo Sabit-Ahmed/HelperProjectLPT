@@ -23,7 +23,7 @@ struct ExerciseListView: View {
                                     .foregroundColor(.white)
                                     .cornerRadius(10)
                                     .shadow(radius: 5)
-                                    .frame(width: geo.size.width - 20, height: geo.size.height / 4, alignment: .center)
+                                    .frame(width: geo.size.width - 20, height: 170, alignment: .center)
                                 
                                 ExerciseRowView()
                             }
