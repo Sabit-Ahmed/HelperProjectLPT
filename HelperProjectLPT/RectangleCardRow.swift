@@ -10,7 +10,7 @@ import SwiftUI
 struct RectangleCardRow: View {
     var body: some View {
         RectangleCard(color: .white)
-            .cornerRadius(10)
+            .cornerRadius(5)
             .shadow(radius: 5)
             .frame(height: 170, alignment: .center)
     }

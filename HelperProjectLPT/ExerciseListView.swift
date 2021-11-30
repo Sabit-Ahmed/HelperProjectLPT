@@ -33,8 +33,9 @@ struct ExerciseListView: View {
                             }
                             .navigationBarHidden(true)
                         }
-                        
+                        .padding(.vertical)
                     }
+            
                 }
                 
             }

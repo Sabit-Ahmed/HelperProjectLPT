@@ -45,7 +45,7 @@ struct ExerciseRowView: View {
                     })
                     
                 }
-                .padding()
+                
                 Spacer()
             }
             .padding()
