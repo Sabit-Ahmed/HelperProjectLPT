@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct RectangleCard: View {
-    var color = Color.white
+    var color = Color.init(red: 8 / 255, green: 24 / 255, blue: 89 / 255)
     
     var body: some View {
         Rectangle()
             .foregroundColor(color)
-            .cornerRadius(10)
-            .shadow(radius: 5)
-            .frame(height: 48)
     }
 }
 

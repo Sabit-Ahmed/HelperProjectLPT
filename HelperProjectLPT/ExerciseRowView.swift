@@ -8,48 +8,51 @@
 import SwiftUI
 
 struct ExerciseRowView: View {
+    
+    var width: CGFloat = 350
+    
     var body: some View {
         
-        GeometryReader { geo in
-            ZStack {
-                HStack (spacing: 10) {
+        ZStack {
+            RectangleCardCommon(width: self.width)
+            
+            HStack (spacing: 10) {
+                Spacer()
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .clipped()
+                    .cornerRadius(5)
+                Spacer()
+                VStack(alignment: .leading, spacing: 15) {
                     
-                    Image(systemName: "person.circle")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .clipped()
-                        .cornerRadius(5)
+                    Text("Exercise Title")
+                        .bold()
                     
-                    VStack(alignment: .leading, spacing: 15) {
-                        
-                        Text("Exercise Title")
-                            .bold()
-                        
-                        Text("0 Sets (5 Repitions/Set)")
-                        
-                        NavigationLink(destination: UIKitView(),
-                                       label: {
-                            ZStack {
-                                Rectangle()
-                                    .foregroundColor(.blue)
-                                    .cornerRadius(10)
-                                    .shadow(radius: 5)
-                                    .frame(width: 160, height: 50, alignment: .center)
-                                
-                                Text("START EXERCISE")
-                                    .foregroundColor(.white)
-                                    .bold()
-                            }
-                        })
-                        
-                    }
-                    .padding()
+                    Text("0 Sets (5 Repitions/Set)")
+                    
+                    NavigationLink(destination: UIKitView(),
+                                   label: {
+                        ZStack {
+                            RectangleCard()
+                                .cornerRadius(10)
+                                .shadow(radius: 5)
+                                .frame(width: 160, height: 50, alignment: .center)
+                            
+                            Text("START EXERCISE")
+                                .foregroundColor(.white)
+                                .bold()
+                        }
+                    })
+                    
                 }
                 .padding()
-                
+                Spacer()
             }
+            .padding()
         }
+        
         
         
     }
