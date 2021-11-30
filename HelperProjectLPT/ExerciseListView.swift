@@ -15,7 +15,6 @@ struct ExerciseListView: View {
         
         
         VStack {
-            RectangleCardUpper()
             
             VStack(alignment: .leading) {
                 Text("Exercise List")

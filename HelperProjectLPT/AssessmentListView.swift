@@ -28,8 +28,12 @@ struct AssessmentListView: View {
                         
                         LazyVStack(spacing: 0) {
                             ForEach(exerciseList, id: \.self) { exercise in
-                                AssessmentRowView()
+                                NavigationLink(destination: ExerciseListView(),
+                                               label: {
+                                    AssessmentRowView()
+                                })
                             }
+                            .foregroundColor(.black)
                             .navigationBarHidden(true)
                         }
                         .padding(.vertical)
