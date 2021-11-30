@@ -18,20 +18,16 @@ struct ExerciseListView: View {
                 ScrollView {
                     LazyVStack(alignment: .leading, spacing: 15) {
                         ForEach(exerciseList, id: \.self) { exercise in
-                            NavigationLink(
-                                destination: UIKitView(),
-                                label: {
-                                    ZStack {
-                                        Rectangle()
-                                            .foregroundColor(.white)
-                                            .cornerRadius(10)
-                                            .shadow(radius: 5)
-                                            .frame(width: geo.size.width - 20, height: geo.size.height / 4, alignment: .center)
-                                        
-                                        ExerciseRowView()
-                                    }
-                                    .foregroundColor(.black)
-                                })
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(.white)
+                                    .cornerRadius(10)
+                                    .shadow(radius: 5)
+                                    .frame(width: geo.size.width - 20, height: geo.size.height / 4, alignment: .center)
+                                
+                                ExerciseRowView()
+                            }
+                                
                         }
                         .navigationTitle("Exercise List")
                     }

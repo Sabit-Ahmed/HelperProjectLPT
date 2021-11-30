@@ -17,7 +17,7 @@ struct ExerciseRowView: View {
                     Image(systemName: "person.circle")
                         .resizable()
                         .scaledToFill()
-                        .frame(width: geo.size.width / 3.5, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .clipped()
                         .cornerRadius(5)
                     
@@ -28,11 +28,20 @@ struct ExerciseRowView: View {
                         
                         Text("0 Sets (5 Repitions/Set)")
                         
-                        Button {
-                            // TODO
-                        } label: {
-                            Text("START EXERCISE")
-                        }
+                        NavigationLink(destination: UIKitView(),
+                                       label: {
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(.blue)
+                                    .cornerRadius(10)
+                                    .shadow(radius: 5)
+                                    .frame(width: 160, height: 50, alignment: .center)
+                                
+                                Text("START EXERCISE")
+                                    .foregroundColor(.white)
+                                    .bold()
+                            }
+                        })
                         
                     }
                     .padding()
