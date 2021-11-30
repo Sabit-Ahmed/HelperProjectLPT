@@ -41,6 +41,7 @@ struct ExerciseListView: View {
             }
             
         }
+        .ignoresSafeArea()
         
     }
     
