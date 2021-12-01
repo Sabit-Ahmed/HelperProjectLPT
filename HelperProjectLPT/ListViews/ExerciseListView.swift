@@ -39,8 +39,14 @@ struct ExerciseListView: View {
         .navigationBarBackButtonHidden(true) // hides the "back" or previous view title button
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                Button("Back") {
+                Button {
                     presentationMode.wrappedValue.dismiss() // this changes in iOS15
+                } label: {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                        
+                        Text("Back")
+                    }
                 }
             }
         }
