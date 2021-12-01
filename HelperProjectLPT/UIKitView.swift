@@ -9,7 +9,9 @@ import SwiftUI
 
 struct UIKitView: View {
     var body: some View {
-        Text("UIKitView here")
+        NavigationView {
+            Text("UIKitView here")
+        }
     }
 }
 

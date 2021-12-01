@@ -13,7 +13,7 @@ struct RectangleCardUpper: View {
             RectangleCard()
                 .frame(height: 250)
             
-            VStack {
+            VStack(spacing: 20) {
                 HStack {
                     Spacer()
                     Image(systemName: "list.bullet")
