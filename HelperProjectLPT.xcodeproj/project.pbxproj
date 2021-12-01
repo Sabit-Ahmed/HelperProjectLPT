@@ -66,14 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				232598442755120800BF3018 /* HelperProjectLPTApp.swift */,
-				23578CF22756520F00260FC0 /* RectangleCard.swift */,
-				23578CF42756688B00260FC0 /* RectangleCardRow.swift */,
-				23578CF02756516F00260FC0 /* RectangleCardUpper.swift */,
-				23578CFA2756713100260FC0 /* AssessmentRowView.swift */,
-				23578CF62756710B00260FC0 /* AssessmentListView.swift */,
-				237924C7275512A4008E7650 /* ExerciseRowView.swift */,
-				232598462755120800BF3018 /* ExerciseListView.swift */,
 				237924C92755133D008E7650 /* UIKitView.swift */,
+				23BA6A932757AF9400867FA3 /* ListViews */,
 				2325984A2755120900BF3018 /* Preview Content */,
 			);
 			path = HelperProjectLPT;
@@ -86,6 +80,20 @@
 				2325984B2755120900BF3018 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		23BA6A932757AF9400867FA3 /* ListViews */ = {
+			isa = PBXGroup;
+			children = (
+				23578CF22756520F00260FC0 /* RectangleCard.swift */,
+				23578CF42756688B00260FC0 /* RectangleCardRow.swift */,
+				23578CF02756516F00260FC0 /* RectangleCardUpper.swift */,
+				23578CFA2756713100260FC0 /* AssessmentRowView.swift */,
+				23578CF62756710B00260FC0 /* AssessmentListView.swift */,
+				237924C7275512A4008E7650 /* ExerciseRowView.swift */,
+				232598462755120800BF3018 /* ExerciseListView.swift */,
+			);
+			path = ListViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
