@@ -39,6 +39,7 @@ struct ExerciseListView: View {
             
             
         }
+        .navigationBarHidden(true)
        
         
     }
