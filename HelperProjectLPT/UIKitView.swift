@@ -9,9 +9,9 @@ import SwiftUI
 
 struct UIKitView: View {
     var body: some View {
-        NavigationView {
-            Text("UIKitView here")
-        }
+        
+        Text("UIKitView here")
+        
     }
 }
 

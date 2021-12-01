@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExerciseListView: View {
     
+    @Environment(\.presentationMode) var presentationMode
     var exerciseList = ["Exercise 1","Exercise 2","Exercise 3","Exercise 4","Exercise 5","Exercise 6"]
     
     var body: some View {
@@ -33,8 +34,16 @@ struct ExerciseListView: View {
                 .padding(.vertical)
             }
         }
-        
-        
+//        .navigationTitle("title")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true) // hides the "back" or previous view title button
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button("Back") {
+                    presentationMode.wrappedValue.dismiss() // this changes in iOS15
+                }
+            }
+        }
     }
     
 }
