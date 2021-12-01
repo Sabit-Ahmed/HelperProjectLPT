@@ -31,7 +31,6 @@ struct AssessmentListView: View {
                                            label: {
                                 AssessmentRowView()
                             })
-                            
                         }
                         .foregroundColor(.black)
                         .navigationBarHidden(true)

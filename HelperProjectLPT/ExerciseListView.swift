@@ -13,35 +13,27 @@ struct ExerciseListView: View {
     
     var body: some View {
         
-        NavigationView {
+        VStack(alignment: .leading) {
             
-            VStack(alignment: .leading) {
+            RectangleCardUpper()
+            
+            Text("Exercise List")
+                .bold()
+                .font(.title)
+                .padding(.leading, 15)
+            
+            ScrollView {
                 
-                RectangleCardUpper()
-                
-                Text("Exercise List")
-                    .bold()
-                    .font(.title)
-                    .padding(.leading, 15)
-                
-                ScrollView {
-                    
-                    LazyVStack(spacing: 0) {
-                        ForEach(exerciseList, id: \.self) { exercise in
-                            ExerciseRowView()
-                        }
-                        
+                LazyVStack(spacing: 0) {
+                    ForEach(exerciseList, id: \.self) { exercise in
+                        ExerciseRowView()
                     }
-                    .navigationBarHidden(true)
-                    .padding(.vertical)
+                    
                 }
+                .padding(.vertical)
             }
-            
-            
         }
-        .navigationBarHidden(true)
-       
-        
+      
     }
     
 }
