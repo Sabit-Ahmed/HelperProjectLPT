@@ -23,12 +23,15 @@ struct ExerciseRowView: View {
                     .clipped()
                     .cornerRadius(5)
                 Spacer()
-                VStack(alignment: .leading, spacing: 15) {
+                VStack(alignment: .leading, spacing: 10) {
                     
                     Text("Exercise Title")
                         .bold()
+                        .padding(.vertical)
                     
-                    Text("0 Sets (5 Repitions/Set)")
+                    Text("Assigned set: 0")
+                    
+                    Text("Assigned repetition: 10")
                     
                     NavigationLink(destination: UIKitView(),
                                    label: {

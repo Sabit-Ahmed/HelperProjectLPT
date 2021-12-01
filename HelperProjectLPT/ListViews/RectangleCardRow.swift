@@ -12,7 +12,7 @@ struct RectangleCardRow: View {
         RectangleCard(color: .white)
             .cornerRadius(5)
             .shadow(radius: 5)
-            .frame(height: 170, alignment: .center)
+            .frame(height: 220, alignment: .center)
     }
 }
 

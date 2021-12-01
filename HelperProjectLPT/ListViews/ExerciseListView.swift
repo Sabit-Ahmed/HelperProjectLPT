@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExerciseListView: View {
     
-    var exerciseList = ["Exercise 1","Exercise 2","Exercise 3"]
+    var exerciseList = ["Exercise 1","Exercise 2","Exercise 3","Exercise 4","Exercise 5","Exercise 6"]
     
     var body: some View {
         
@@ -33,7 +33,8 @@ struct ExerciseListView: View {
                 .padding(.vertical)
             }
         }
-      
+        
+        
     }
     
 }
