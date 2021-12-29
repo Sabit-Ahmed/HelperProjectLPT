@@ -10,7 +10,12 @@ import SwiftUI
 struct UIKitView: View {
     var body: some View {
         
-        Text("UIKitView here")
+        VStack {
+            Text("UIKitView here")
+            
+            ToastViewDemo2()
+        }
+        
         
     }
 }

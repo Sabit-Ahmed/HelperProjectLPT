@@ -16,6 +16,10 @@
 		23578CF52756688B00260FC0 /* RectangleCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF42756688B00260FC0 /* RectangleCardRow.swift */; };
 		23578CF72756710B00260FC0 /* AssessmentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF62756710B00260FC0 /* AssessmentListView.swift */; };
 		23578CFB2756713100260FC0 /* AssessmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CFA2756713100260FC0 /* AssessmentRowView.swift */; };
+		235911AE277C6B1C0068B29D /* ToastViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235911AD277C6B1C0068B29D /* ToastViewDemo.swift */; };
+		235911B1277C6C470068B29D /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 235911B0277C6C470068B29D /* AlertToast */; };
+		235911B4277C769A0068B29D /* SSToastMessage in Frameworks */ = {isa = PBXBuildFile; productRef = 235911B3277C769A0068B29D /* SSToastMessage */; };
+		235911B6277C76B20068B29D /* ToastViewDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235911B5277C76B20068B29D /* ToastViewDemo2.swift */; };
 		237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C7275512A4008E7650 /* ExerciseRowView.swift */; };
 		237924CA2755133D008E7650 /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C92755133D008E7650 /* UIKitView.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +35,8 @@
 		23578CF42756688B00260FC0 /* RectangleCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardRow.swift; sourceTree = "<group>"; };
 		23578CF62756710B00260FC0 /* AssessmentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentListView.swift; sourceTree = "<group>"; };
 		23578CFA2756713100260FC0 /* AssessmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentRowView.swift; sourceTree = "<group>"; };
+		235911AD277C6B1C0068B29D /* ToastViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewDemo.swift; sourceTree = "<group>"; };
+		235911B5277C76B20068B29D /* ToastViewDemo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewDemo2.swift; sourceTree = "<group>"; };
 		237924C7275512A4008E7650 /* ExerciseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRowView.swift; sourceTree = "<group>"; };
 		237924C92755133D008E7650 /* UIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235911B4277C769A0068B29D /* SSToastMessage in Frameworks */,
+				235911B1277C6C470068B29D /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +77,8 @@
 				237924C92755133D008E7650 /* UIKitView.swift */,
 				23BA6A932757AF9400867FA3 /* ListViews */,
 				2325984A2755120900BF3018 /* Preview Content */,
+				235911AD277C6B1C0068B29D /* ToastViewDemo.swift */,
+				235911B5277C76B20068B29D /* ToastViewDemo2.swift */,
 			);
 			path = HelperProjectLPT;
 			sourceTree = "<group>";
@@ -112,6 +122,10 @@
 			dependencies = (
 			);
 			name = HelperProjectLPT;
+			packageProductDependencies = (
+				235911B0277C6C470068B29D /* AlertToast */,
+				235911B3277C769A0068B29D /* SSToastMessage */,
+			);
 			productName = HelperProjectLPT;
 			productReference = 232598412755120800BF3018 /* HelperProjectLPT.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +154,10 @@
 				Base,
 			);
 			mainGroup = 232598382755120800BF3018;
+			packageReferences = (
+				235911AF277C6C470068B29D /* XCRemoteSwiftPackageReference "AlertToast" */,
+				235911B2277C769A0068B29D /* XCRemoteSwiftPackageReference "SSToastMessage" */,
+			);
 			productRefGroup = 232598422755120800BF3018 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,10 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */,
+				235911AE277C6B1C0068B29D /* ToastViewDemo.swift in Sources */,
 				232598472755120800BF3018 /* ExerciseListView.swift in Sources */,
 				23578CF32756520F00260FC0 /* RectangleCard.swift in Sources */,
 				23578CF72756710B00260FC0 /* AssessmentListView.swift in Sources */,
 				23578CF12756516F00260FC0 /* RectangleCardUpper.swift in Sources */,
+				235911B6277C76B20068B29D /* ToastViewDemo2.swift in Sources */,
 				232598452755120800BF3018 /* HelperProjectLPTApp.swift in Sources */,
 				237924CA2755133D008E7650 /* UIKitView.swift in Sources */,
 				23578CF52756688B00260FC0 /* RectangleCardRow.swift in Sources */,
@@ -377,6 +397,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		235911AF277C6C470068B29D /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		235911B2277C769A0068B29D /* XCRemoteSwiftPackageReference "SSToastMessage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimformSolutionsPvtLtd/SSToastMessage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		235911B0277C6C470068B29D /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 235911AF277C6C470068B29D /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+		235911B3277C769A0068B29D /* SSToastMessage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 235911B2277C769A0068B29D /* XCRemoteSwiftPackageReference "SSToastMessage" */;
+			productName = SSToastMessage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 232598392755120800BF3018 /* Project object */;
 }
