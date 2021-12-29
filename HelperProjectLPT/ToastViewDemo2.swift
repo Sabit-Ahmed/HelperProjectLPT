@@ -64,7 +64,7 @@ struct ToastViewDemo2: View{
                     }
                 }.padding(15)
             }
-            .frame(width: UIScreen.main.bounds.width, height: 110)
+            .frame(width: UIScreen.main.bounds.width, height: 40)
             .background(Color(red: 0.85, green: 0.65, blue: 0.56))
         }
     
@@ -75,13 +75,13 @@ struct ToastViewDemo2: View{
                     .font(.system(size: 14))
                     .foregroundColor(.white)
             }
-            .frame(width: UIScreen.main.bounds.width, height: 110)
+            .frame(width: UIScreen.main.bounds.width, height: 40)
             .background(Color(red: 0.85, green: 0.65, blue: 0.56))
         }
 }
 
 struct ToastViewDemo2_Previews: PreviewProvider {
     static var previews: some View {
-        ToastViewDemo()
+        ToastViewDemo2()
     }
 }
