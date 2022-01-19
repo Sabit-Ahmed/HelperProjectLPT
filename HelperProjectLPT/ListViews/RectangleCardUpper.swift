@@ -11,9 +11,9 @@ struct RectangleCardUpper: View {
     var body: some View {
         ZStack {
             RectangleCard()
-                .frame(height: 250)
+                .frame(height: 180)
             
-            VStack(spacing: 20) {
+            VStack(spacing: 15) {
                 HStack {
                     Spacer()
                     Image(systemName: "list.bullet")
@@ -24,23 +24,23 @@ struct RectangleCardUpper: View {
                     Spacer()
                     Text("EMMA Virtual Therapist")
                         .font(.title)
-                        .bold()
                         .foregroundColor(.white)
+                        .scaledToFit()
                     Spacer()
                 }
-                .padding(.top, 25)
                 
                 HStack(spacing: 25) {
                     Image(systemName: "person.circle.fill")
                         .resizable()
-                        .scaledToFill()
-                        .frame(width: 95, height: 95)
+                        .scaledToFit()
+                        .frame(width: 90, height: 90)
                         .clipped()
                         .foregroundColor(.white)
                         
-                    VStack(alignment: .leading, spacing: 5) {
+                    VStack(alignment: .leading, spacing: 2) {
                         Text("MyMedicalHUB")
-                            .font(.title)
+                            .font(.title2)
+                            .fontWeight(.heavy)
                             .foregroundColor(.white)
                         
                         Text("Hello Hanif Thakur")
@@ -52,10 +52,12 @@ struct RectangleCardUpper: View {
                         Text("Your personal exercise assistant")
                             .foregroundColor(.white)
                     }
+                    
                 }
-                .padding()
+                
+                
             }
-            
+            .padding(5)
             
         }
 
