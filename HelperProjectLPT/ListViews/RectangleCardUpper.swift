@@ -25,11 +25,11 @@ struct RectangleCardUpper: View {
                     Text("EMMA Virtual Therapist")
                         .font(.title)
                         .foregroundColor(.white)
-                        .scaledToFit()
+                        
                     Spacer()
                 }
                 
-                HStack(spacing: 25) {
+                HStack(spacing: 10) {
                     Image(systemName: "person.circle.fill")
                         .resizable()
                         .scaledToFit()
@@ -39,21 +39,22 @@ struct RectangleCardUpper: View {
                         
                     VStack(alignment: .leading, spacing: 2) {
                         Text("MyMedicalHUB")
-                            .font(.title2)
+                            .font(.system(size: 20))
                             .fontWeight(.heavy)
                             .foregroundColor(.white)
                         
-                        Text("Hello Hanif Thakur")
+                        Text("Hello Hanif Thakur.")
                             .foregroundColor(.white)
                         
-                        Text("I'm EMMA")
+                        Text("I'm EMMA.")
                             .foregroundColor(.white)
                         
-                        Text("Your personal exercise assistant")
+                        Text("Your personal exercise assistant.")
                             .foregroundColor(.white)
                     }
                     
                 }
+                
                 
                 
             }
