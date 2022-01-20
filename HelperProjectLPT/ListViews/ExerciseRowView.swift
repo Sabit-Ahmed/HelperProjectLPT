@@ -108,10 +108,18 @@ struct ExerciseRowView: View {
                 }
                 .padding(.vertical, 20)
                 
-                Image(systemName: "info.circle.fill")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(.blue)
+                NavigationLink {
+                    //
+                    InstructionViewWithRegex()
+                } label: {
+                    
+                    Image(systemName: "info.circle.fill")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.blue)
+                }
+
+                    
             }
             .padding()
         }
