@@ -14,44 +14,76 @@ struct ExerciseRowView: View {
         ZStack {
             RectangleCardRow()
             
-            HStack (spacing: 10) {
-                Spacer()
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .clipped()
-                    .cornerRadius(5)
-                Spacer()
-                VStack(alignment: .leading, spacing: 10) {
+            
+            
+            VStack {
+                
+                HStack (spacing: 15) {
                     
-                    Text("Exercise Title")
-                        .bold()
-                        .padding(.vertical)
+                    Image(systemName: "person.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .clipped()
+                        .cornerRadius(5)
                     
-                    Text("Assigned set: 0")
+                    VStack(alignment: .leading, spacing: 5) {
+                        
+                        Text("Exercise Title")
+                            .bold()
+                            .padding(.vertical, 5)
+                        
+                        Text("Assigned set: 0")
+                        
+                        Text("Assigned repetition: 10")
+                         
+                    }
+                    .padding(10)
                     
-                    Text("Assigned repetition: 10")
+                   
+                }
+                .padding(.horizontal, 10)
+                
+                HStack {
                     
-                    NavigationLink(destination: UIKitView(),
-                                   label: {
+                    Spacer()
+                    VStack {
+                        NavigationLink(destination: UIKitView(),
+                                       label: {
+                            ZStack {
+                                RectangleCard()
+                                    .cornerRadius(5)
+                                    .shadow(radius: 5)
+                                    .frame(width: 150, height: 32, alignment: .center)
+                                
+                                Text("START WORKOUT")
+                                    .font(.system(size: 13))
+                                    .foregroundColor(.white)
+                                    .bold()
+                            }
+                        })
+                    }
+                    
+                    Spacer()
+                    VStack {
+                        
                         ZStack {
                             RectangleCard()
-                                .cornerRadius(10)
+                                .cornerRadius(5)
                                 .shadow(radius: 5)
-                                .frame(width: 160, height: 50, alignment: .center)
+                                .frame(width: 160, height: 32, alignment: .center)
                             
-                            Text("START EXERCISE")
+                            Text("MANUAL TRACKING")
+                                .font(.system(size: 13))
                                 .foregroundColor(.white)
                                 .bold()
                         }
-                    })
+                        
+                    }
                     
+                    Spacer()
                 }
-                
-                Spacer()
             }
-            .padding()
         }
         
         
