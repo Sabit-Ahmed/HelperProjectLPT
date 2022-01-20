@@ -18,10 +18,10 @@ struct ManualTrackingView: View {
     
     var body: some View {
         
-        ZStack(alignment: .leading) {
+        ZStack {
             Rectangle()
                 .foregroundColor(.black)
-                .frame(width: deviceWidth - 50, height: 250, alignment: .center)
+                .frame(width: deviceWidth - 20, height: 250, alignment: .center)
             
             VStack(alignment: .leading, spacing: 10) {
                 Text("Manual Tracking")
@@ -30,17 +30,17 @@ struct ManualTrackingView: View {
                 
                 TextField("Enter Set Count", text: $setCount)
                     .frame(width: deviceWidth - 150, height: 20, alignment: .center)
-                    .foregroundColor(.gray)
+                    .background(.gray)
                     .border(.gray)
                 
                 TextField("Enter Repition Count", text: $repCount)
                     .frame(width: deviceWidth - 150, height: 20, alignment: .center)
-                    .foregroundColor(.gray)
+                    .background(.gray)
                     .border(.gray)
                 
                 TextField("Enter Wrong Count", text: $wrongCount)
                     .frame(width: deviceWidth - 150, height: 20, alignment: .center)
-                    .foregroundColor(.white)
+                    .background(.gray)
                     .border(.gray)
                 
                 HStack {
@@ -70,8 +70,8 @@ struct ManualTrackingView: View {
                 }
                 
             }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 10)
+            .padding(.horizontal, 60)
+            .padding(.vertical, 20)
         }
         
     }
