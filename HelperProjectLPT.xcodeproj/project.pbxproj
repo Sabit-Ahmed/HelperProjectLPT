@@ -22,6 +22,7 @@
 		235911B6277C76B20068B29D /* ToastViewDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235911B5277C76B20068B29D /* ToastViewDemo2.swift */; };
 		237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C7275512A4008E7650 /* ExerciseRowView.swift */; };
 		237924CA2755133D008E7650 /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C92755133D008E7650 /* UIKitView.swift */; };
+		23CBC26727995FB20017B18E /* ManualTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC26627995FB20017B18E /* ManualTrackingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		235911B5277C76B20068B29D /* ToastViewDemo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastViewDemo2.swift; sourceTree = "<group>"; };
 		237924C7275512A4008E7650 /* ExerciseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRowView.swift; sourceTree = "<group>"; };
 		237924C92755133D008E7650 /* UIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitView.swift; sourceTree = "<group>"; };
+		23CBC26627995FB20017B18E /* ManualTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTrackingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				23578CF62756710B00260FC0 /* AssessmentListView.swift */,
 				237924C7275512A4008E7650 /* ExerciseRowView.swift */,
 				232598462755120800BF3018 /* ExerciseListView.swift */,
+				23CBC26627995FB20017B18E /* ManualTrackingView.swift */,
 			);
 			path = ListViews;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				23578CF72756710B00260FC0 /* AssessmentListView.swift in Sources */,
 				23578CF12756516F00260FC0 /* RectangleCardUpper.swift in Sources */,
 				235911B6277C76B20068B29D /* ToastViewDemo2.swift in Sources */,
+				23CBC26727995FB20017B18E /* ManualTrackingView.swift in Sources */,
 				232598452755120800BF3018 /* HelperProjectLPTApp.swift in Sources */,
 				237924CA2755133D008E7650 /* UIKitView.swift in Sources */,
 				23578CF52756688B00260FC0 /* RectangleCardRow.swift in Sources */,

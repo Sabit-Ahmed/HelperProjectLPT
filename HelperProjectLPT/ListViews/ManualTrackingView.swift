@@ -1,0 +1,79 @@
+//
+//  ManualTrakingView.swift
+//  HelperProjectLPT
+//
+//  Created by Sabit Ahmed on 20/1/22.
+//
+
+import SwiftUI
+
+struct ManualTrackingView: View {
+    
+    @State private var setCount: String = ""
+    @State private var repCount: String = ""
+    @State private var wrongCount: String = ""
+    @Binding var isManualTrackingShowed: Bool
+    
+    var deviceWidth = UIScreen.main.bounds.width
+    
+    var body: some View {
+        
+        ZStack(alignment: .leading) {
+            Rectangle()
+                .foregroundColor(.black)
+                .frame(width: deviceWidth - 50, height: 250, alignment: .center)
+            
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Manual Tracking")
+                    .foregroundColor(.white)
+                    .bold()
+                
+                TextField("Enter Set Count", text: $setCount)
+                    .frame(width: deviceWidth - 150, height: 20, alignment: .center)
+                    .foregroundColor(.gray)
+                    .border(.gray)
+                
+                TextField("Enter Repition Count", text: $repCount)
+                    .frame(width: deviceWidth - 150, height: 20, alignment: .center)
+                    .foregroundColor(.gray)
+                    .border(.gray)
+                
+                TextField("Enter Wrong Count", text: $wrongCount)
+                    .frame(width: deviceWidth - 150, height: 20, alignment: .center)
+                    .foregroundColor(.white)
+                    .border(.gray)
+                
+                HStack {
+                    Spacer()
+                    Button {
+                        //
+                        isManualTrackingShowed = false
+                    } label: {
+                        Text("CANCEL")
+                            .foregroundColor(.white)
+                            .font(.system(size: 15))
+                            .bold()
+                    }
+
+                    Spacer()
+                    Button {
+                        //
+                        isManualTrackingShowed = false
+                    } label: {
+                        Text("SUBMIT")
+                            .foregroundColor(.white)
+                            .font(.system(size: 15))
+                            .bold()
+                    }
+
+                    Spacer()
+                }
+                
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 10)
+        }
+        
+    }
+}
+

@@ -9,11 +9,16 @@ import SwiftUI
 
 struct ExerciseRowView: View {
     
+    @State var isManualTrackingShowed: Bool = false
+    
     var body: some View {
+        
+        if isManualTrackingShowed == true {
+            ManualTrackingView(isManualTrackingShowed: $isManualTrackingShowed)
+        }
         
         ZStack {
             RectangleCardRow()
-            
             
             
             VStack {
@@ -69,6 +74,9 @@ struct ExerciseRowView: View {
                         
                         Button {
                             // TODO
+                            
+                            isManualTrackingShowed = true
+                            
                         } label: {
                             
                             ZStack {
@@ -89,6 +97,7 @@ struct ExerciseRowView: View {
                     Spacer()
                 }
             }
+            .padding(.vertical, 20)
         }
         
         
