@@ -29,19 +29,22 @@ struct ManualTrackingView: View {
                     .bold()
                 
                 TextField("Enter Set Count", text: $setCount)
-                    .frame(width: deviceWidth - 150, height: 20, alignment: .center)
+                    .frame(width: deviceWidth - 150, height: 25, alignment: .center)
                     .background(.gray)
                     .border(.gray)
+                    .padding(5)
                 
                 TextField("Enter Repition Count", text: $repCount)
-                    .frame(width: deviceWidth - 150, height: 20, alignment: .center)
+                    .frame(width: deviceWidth - 150, height: 25, alignment: .center)
                     .background(.gray)
                     .border(.gray)
+                    .padding(5)
                 
                 TextField("Enter Wrong Count", text: $wrongCount)
-                    .frame(width: deviceWidth - 150, height: 20, alignment: .center)
+                    .frame(width: deviceWidth - 150, height: 25, alignment: .center)
                     .background(.gray)
                     .border(.gray)
+                    .padding(5)
                 
                 HStack {
                     Spacer()
