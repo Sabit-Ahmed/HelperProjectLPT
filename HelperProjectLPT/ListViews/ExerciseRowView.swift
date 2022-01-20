@@ -67,16 +67,21 @@ struct ExerciseRowView: View {
                     Spacer()
                     VStack {
                         
-                        ZStack {
-                            RectangleCard()
-                                .cornerRadius(5)
-                                .shadow(radius: 5)
-                                .frame(width: 160, height: 32, alignment: .center)
+                        Button {
+                            // TODO
+                        } label: {
                             
-                            Text("MANUAL TRACKING")
-                                .font(.system(size: 13))
-                                .foregroundColor(.white)
-                                .bold()
+                            ZStack {
+                                RectangleCard()
+                                    .cornerRadius(5)
+                                    .shadow(radius: 5)
+                                    .frame(width: 160, height: 32, alignment: .center)
+                                
+                                Text("MANUAL TRACKING")
+                                    .font(.system(size: 13))
+                                    .foregroundColor(.white)
+                                    .bold()
+                            }
                         }
                         
                     }
