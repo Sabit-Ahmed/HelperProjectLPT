@@ -25,12 +25,20 @@ struct ExerciseRowView: View {
                 
                 HStack (spacing: 15) {
                     
-                    Image(systemName: "person.circle")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .clipped()
-                        .cornerRadius(5)
+                    ZStack(alignment: .topTrailing) {
+                        Image(systemName: "person.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .clipped()
+                            .cornerRadius(5)
+                        
+                        Image(systemName: "checkmark.circle.fill")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .foregroundColor(.green)
+                            
+                    }
                     
                     VStack(alignment: .leading, spacing: 5) {
                         
