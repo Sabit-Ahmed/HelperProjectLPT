@@ -21,91 +21,99 @@ struct ExerciseRowView: View {
             RectangleCardRow()
             
             
-            VStack {
-                
-                HStack (spacing: 15) {
+            ZStack(alignment: .topTrailing) {
+                VStack {
                     
-                    ZStack(alignment: .topTrailing) {
-                        Image(systemName: "person.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .clipped()
-                            .cornerRadius(5)
+                    HStack (spacing: 15) {
                         
-                        Image(systemName: "checkmark.circle.fill")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                            .foregroundColor(.green)
+                        ZStack(alignment: .topTrailing) {
+                            Image(systemName: "person.circle")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .clipped()
+                                .cornerRadius(5)
                             
-                    }
-                    
-                    VStack(alignment: .leading, spacing: 5) {
-                        
-                        Text("Exercise Title")
-                            .bold()
-                            .padding(.vertical, 5)
-                        
-                        Text("Assigned set: 0")
-                        
-                        Text("Assigned repetition: 10")
-                         
-                    }
-                    .padding(10)
-                    
-                   
-                }
-                .padding(.horizontal, 10)
-                
-                HStack {
-                    
-                    Spacer()
-                    VStack {
-                        NavigationLink(destination: UIKitView(),
-                                       label: {
-                            ZStack {
-                                RectangleCard()
-                                    .cornerRadius(5)
-                                    .shadow(radius: 5)
-                                    .frame(width: 150, height: 32, alignment: .center)
+                            Image(systemName: "checkmark.circle.fill")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .foregroundColor(.green)
                                 
-                                Text("START WORKOUT")
-                                    .font(.system(size: 13))
-                                    .foregroundColor(.white)
-                                    .bold()
-                            }
-                        })
-                    }
-                    
-                    Spacer()
-                    VStack {
-                        
-                        Button {
-                            // TODO
-                            
-                            isManualTrackingShowed = true
-                            
-                        } label: {
-                            
-                            ZStack {
-                                RectangleCard()
-                                    .cornerRadius(5)
-                                    .shadow(radius: 5)
-                                    .frame(width: 160, height: 32, alignment: .center)
-                                
-                                Text("MANUAL TRACKING")
-                                    .font(.system(size: 13))
-                                    .foregroundColor(.white)
-                                    .bold()
-                            }
                         }
                         
+                        VStack(alignment: .leading, spacing: 5) {
+                            
+                            Text("Exercise Title")
+                                .bold()
+                                .padding(.vertical, 5)
+                            
+                            Text("Assigned set: 0")
+                            
+                            Text("Assigned repetition: 10")
+                             
+                        }
+                        .padding(10)
+                        
+                       
                     }
+                    .padding(.horizontal, 10)
                     
-                    Spacer()
+                    HStack {
+                        
+                        Spacer()
+                        VStack {
+                            NavigationLink(destination: UIKitView(),
+                                           label: {
+                                ZStack {
+                                    RectangleCard()
+                                        .cornerRadius(5)
+                                        .shadow(radius: 5)
+                                        .frame(width: 150, height: 32, alignment: .center)
+                                    
+                                    Text("START WORKOUT")
+                                        .font(.system(size: 13))
+                                        .foregroundColor(.white)
+                                        .bold()
+                                }
+                            })
+                        }
+                        
+                        Spacer()
+                        VStack {
+                            
+                            Button {
+                                // TODO
+                                
+                                isManualTrackingShowed = true
+                                
+                            } label: {
+                                
+                                ZStack {
+                                    RectangleCard()
+                                        .cornerRadius(5)
+                                        .shadow(radius: 5)
+                                        .frame(width: 160, height: 32, alignment: .center)
+                                    
+                                    Text("MANUAL TRACKING")
+                                        .font(.system(size: 13))
+                                        .foregroundColor(.white)
+                                        .bold()
+                                }
+                            }
+                            
+                        }
+                        
+                        Spacer()
+                    }
                 }
+                .padding(.vertical, 20)
+                
+                Image(systemName: "info.circle.fill")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .foregroundColor(.blue)
             }
-            .padding(.vertical, 20)
+            .padding()
         }
         
         
