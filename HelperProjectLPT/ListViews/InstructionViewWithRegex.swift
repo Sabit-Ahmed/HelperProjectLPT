@@ -13,7 +13,7 @@ struct InstructionViewWithRegex: View {
     @Environment(\.presentationMode) var presentationMode
     
     var urlString: String = "https://mmhai.s3.us-east-2.amazonaws.com/LearnTherapist/emma/AROM Ankle Dorsiflexion in Sitting/AROM Ankle Dorsiflexion in Sitting_1639970462_raw.mp4"
-    
+    let videoRatio: CGFloat = 1080 / 1920
     
     var body: some View {
         
@@ -21,75 +21,77 @@ struct InstructionViewWithRegex: View {
         let encodedUrl = urlString.encodedUrl()
         let videoUrl = encodedUrl
         
-        VStack {
-            
-            RectangleCardUpper()
-            
-            VStack(alignment: .leading) {
-                Text("Exercise Name")
-                    .bold()
-                    .font(.title)
-                    
+        GeometryReader { geo in
+            VStack {
                 
-                ScrollView {
-                    VStack {
-                        VStack(alignment: .leading, spacing: 20) {
-                            Text("Instructions")
-                                .font(.system(size: 20))
-                                .bold()
-                            
-                            Text(textToDisplay)
-                                .font(.system(size: 15))
+                RectangleCardUpper()
+                
+                VStack(alignment: .leading) {
+                    Text("Exercise Name")
+                        .bold()
+                        .font(.title)
+                        
+                    
+                    ScrollView {
+                        VStack {
+                            VStack(alignment: .leading, spacing: 20) {
+                                Text("Instructions")
+                                    .font(.system(size: 20))
+                                    .bold()
                                 
-                            
-                            if let videoUrl = videoUrl {
-                                VStack {
-                                    VideoPlayer(player: AVPlayer(url: videoUrl))
-                                        .frame(width: 200, height: 200, alignment: .center)
+                                Text(textToDisplay)
+                                    .font(.system(size: 15))
+                                    
+                                
+                                if let videoUrl = videoUrl {
+                                    VStack {
+                                        VideoPlayer(player: AVPlayer(url: videoUrl))
+                                            .frame(height: geo.size.width*videoRatio)
+                                    }
                                 }
+                                
+                                
+                                Text("Images")
+                                    .font(.system(size: 20))
+                                    .bold()
+                                
                             }
                             
-                            
-                            Text("Images")
-                                .font(.system(size: 20))
-                                .bold()
+                            VStack {
+                                Image(systemName: "figure.wave.circle")
+                                    .resizable()
+                                    .frame(width: 200, height: 200, alignment: .center)
+                                    .scaledToFit()
+                                
+                                Image(systemName: "figure.wave.circle.fill")
+                                    .resizable()
+                                    .frame(width: 200, height: 200, alignment: .center)
+                                    .scaledToFit()
+                            }
                             
                         }
-                        
-                        VStack {
-                            Image(systemName: "figure.wave.circle")
-                                .resizable()
-                                .frame(width: 200, height: 200, alignment: .center)
-                                .scaledToFit()
-                            
-                            Image(systemName: "figure.wave.circle.fill")
-                                .resizable()
-                                .frame(width: 200, height: 200, alignment: .center)
-                                .scaledToFit()
-                        }
-                        
                     }
+                    
+                    
                 }
-                
+                .padding()
                 
             }
-            .padding()
-            
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true) // hides the "back" or previous view title button
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        presentationMode.wrappedValue.dismiss() // this changes in iOS15
+                    } label: {
+                        HStack {
+                            Image(systemName: "chevron.backward")
+                            
+                            Text("Back")
+                        }
+                    }
+                }
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden(true) // hides the "back" or previous view title button
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    presentationMode.wrappedValue.dismiss() // this changes in iOS15
-                } label: {
-                    HStack {
-                        Image(systemName: "chevron.backward")
-                        
-                        Text("Back")
-                    }
-                }
-            }
         }
     }
     
