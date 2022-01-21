@@ -16,36 +16,42 @@ struct InstructionViewWithRegex: View {
     var body: some View {
         
         let textToDisplay = text.replacingOccurrences(of: "<[^>]*>|&nbsp|;", with: "", options: .regularExpression,
-                                                      range: nil).replacingOccurrences(of: "\n", with: " ",
-                                                      options: .regularExpression, range: nil)
+                                                      range: nil).replacingOccurrences(of: "\r\n", with: " ",
+                                                                                       options: .regularExpression, range: nil)
         
         
         VStack {
             
             RectangleCardUpper()
             
-            VStack {
+            VStack(alignment: .leading) {
                 Text("Exercise Name")
                     .bold()
                     .font(.title)
-                    .padding(.leading, 15)
+                    
                 
                 ScrollView {
-                    Text("Instructions")
-                        .font(.system(size: 20))
-                    
-                    Text(textToDisplay)
-                    
-                    if let videoUrl = videoUrl {
-                        VideoPlayer(player: AVPlayer(url: videoUrl))
-                            .frame(width: 200, height: 200, alignment: .center)
-                    }
-                    
-                    
-                    Text("Images")
-                        .font(.system(size: 20))
-                    
-                    ScrollView {
+                    VStack {
+                        VStack(alignment: .leading, spacing: 20) {
+                            Text("Instructions")
+                                .font(.system(size: 20))
+                                .bold()
+                            
+                            Text(textToDisplay)
+                                
+                            
+                            if let videoUrl = videoUrl {
+                                VideoPlayer(player: AVPlayer(url: videoUrl))
+                                    .frame(width: 200, height: 200, alignment: .center)
+                            }
+                            
+                            
+                            Text("Images")
+                                .font(.system(size: 20))
+                                .bold()
+                            
+                        }
+                        
                         VStack {
                             Image(systemName: "figure.wave.circle")
                                 .resizable()
@@ -57,11 +63,13 @@ struct InstructionViewWithRegex: View {
                                 .frame(width: 200, height: 200, alignment: .center)
                                 .scaledToFit()
                         }
+                        
                     }
                 }
                 
                 
             }
+            .padding()
             
         }
         .onDisappear {
