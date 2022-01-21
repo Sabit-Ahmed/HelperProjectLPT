@@ -110,7 +110,7 @@ struct ExerciseRowView: View {
                 
                 NavigationLink {
                     //
-                    InstructionViewWithRegex()
+                    InstructionView()
                 } label: {
                     
                     Image(systemName: "info.circle.fill")

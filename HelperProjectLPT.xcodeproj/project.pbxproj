@@ -23,7 +23,7 @@
 		237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C7275512A4008E7650 /* ExerciseRowView.swift */; };
 		237924CA2755133D008E7650 /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C92755133D008E7650 /* UIKitView.swift */; };
 		23CBC26727995FB20017B18E /* ManualTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC26627995FB20017B18E /* ManualTrackingView.swift */; };
-		23CBC2712799AA820017B18E /* InstructionViewWithRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC2702799AA820017B18E /* InstructionViewWithRegex.swift */; };
+		23CBC2712799AA820017B18E /* InstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC2702799AA820017B18E /* InstructionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		237924C7275512A4008E7650 /* ExerciseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRowView.swift; sourceTree = "<group>"; };
 		237924C92755133D008E7650 /* UIKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitView.swift; sourceTree = "<group>"; };
 		23CBC26627995FB20017B18E /* ManualTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTrackingView.swift; sourceTree = "<group>"; };
-		23CBC2702799AA820017B18E /* InstructionViewWithRegex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewWithRegex.swift; sourceTree = "<group>"; };
+		23CBC2702799AA820017B18E /* InstructionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				237924C7275512A4008E7650 /* ExerciseRowView.swift */,
 				232598462755120800BF3018 /* ExerciseListView.swift */,
 				23CBC26627995FB20017B18E /* ManualTrackingView.swift */,
-				23CBC2702799AA820017B18E /* InstructionViewWithRegex.swift */,
+				23CBC2702799AA820017B18E /* InstructionView.swift */,
 			);
 			path = ListViews;
 			sourceTree = "<group>";
@@ -191,7 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */,
-				23CBC2712799AA820017B18E /* InstructionViewWithRegex.swift in Sources */,
+				23CBC2712799AA820017B18E /* InstructionView.swift in Sources */,
 				235911AE277C6B1C0068B29D /* ToastViewDemo.swift in Sources */,
 				232598472755120800BF3018 /* ExerciseListView.swift in Sources */,
 				23578CF32756520F00260FC0 /* RectangleCard.swift in Sources */,

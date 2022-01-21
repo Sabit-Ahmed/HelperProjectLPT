@@ -8,7 +8,7 @@
 import SwiftUI
 import AVKit
 
-struct InstructionViewWithRegex: View {
+struct InstructionView: View {
     var text: String = "<p class=\"MsoNormal\">In standing, begin by holding a dowel behind your back. Using\r\nyour uninjured arm, drive your affected hand behind your back towards the side as far as\r\nyou feel comfortable. Slowly return to the starting position and repeat as\r\nshown on the reference table. Do not lean forward too much and do not\r\ncompensate on your wrist.</p><p class=\"MsoNormal\"><o:p></o:p></p>"
     @Environment(\.presentationMode) var presentationMode
     
