@@ -11,7 +11,8 @@ import AVKit
 struct InstructionViewWithRegex: View {
     var text: String = "<p class=\"MsoNormal\">In standing, begin by holding a dowel behind your back. Using\r\nyour uninjured arm, drive your affected hand behind your back towards the side as far as\r\nyou feel comfortable. Slowly return to the starting position and repeat as\r\nshown on the reference table. Do not lean forward too much and do not\r\ncompensate on your wrist.</p><p class=\"MsoNormal\"><o:p></o:p></p>"
     @Environment(\.presentationMode) var presentationMode
-    let videoUrl = URL(string: "https://mmhai.s3.us-east-2.amazonaws.com/LearnTherapist/emma/AROM Ankle Dorsiflexion in Sitting/AROM Ankle Dorsiflexion in Sitting_1639970462_raw.mp4")
+     
+    let videoUrl = URL(string: "https://mmhai.s3.us-east-2.amazonaws.com/LearnTherapist/emma/AROM Ankle Dorsiflexion in Sitting/AROM Ankle Dorsiflexion in Sitting_1639970462_raw")
     
     var body: some View {
         
@@ -41,8 +42,10 @@ struct InstructionViewWithRegex: View {
                                 
                             
                             if let videoUrl = videoUrl {
-                                VideoPlayer(player: AVPlayer(url: videoUrl))
-                                    .frame(width: 200, height: 200, alignment: .center)
+                                VStack {
+                                    VideoPlayer(player: AVPlayer(url: videoUrl))
+                                        .frame(width: 200, height: 200, alignment: .center)
+                                }
                             }
                             
                             
@@ -72,8 +75,20 @@ struct InstructionViewWithRegex: View {
             .padding()
             
         }
-        .onDisappear {
-            presentationMode.wrappedValue.dismiss()
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true) // hides the "back" or previous view title button
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    presentationMode.wrappedValue.dismiss() // this changes in iOS15
+                } label: {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                        
+                        Text("Back")
+                    }
+                }
+            }
         }
     }
 }
