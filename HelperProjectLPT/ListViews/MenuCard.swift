@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MenuCard: View {
+    
+    @EnvironmentObject var apiData: GetApiData
+    
     var body: some View {
         
         VStack(spacing: 0) {
@@ -53,24 +56,25 @@ struct MenuCard: View {
                 .padding()
             }
         }
-        
+        .frame(width: 300)
     }
-}
+    
+    @ViewBuilder
+    func iconView() -> some View {
+        Button {
+            // Hide MenuCard
+            apiData.showMenuCard = false
+        } label: {
+            Image(systemName: "text.badge.minus")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 25, height: 25, alignment: .leading)
+                .foregroundColor(.white)
+                .padding(.top, 23)
+                .padding(.leading, 13)
+        }
 
-
-@ViewBuilder
-func iconView() -> some View {
-    Button {
-        //
-    } label: {
-        Image(systemName: "text.badge.minus")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 35, height: 35, alignment: .leading)
-            .foregroundColor(.white)
-            .padding()
     }
-
 }
 
 

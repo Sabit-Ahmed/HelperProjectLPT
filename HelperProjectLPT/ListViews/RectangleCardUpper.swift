@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RectangleCardUpper: View {
+    
+    @EnvironmentObject var apiData: GetApiData
+    
     var body: some View {
         ZStack {
             RectangleCard()
@@ -16,7 +19,8 @@ struct RectangleCardUpper: View {
             VStack(alignment: .leading, spacing: 15) {
                 HStack (spacing: 30) {
                     Button {
-                        //
+                        // Show MenuCard
+                        apiData.showMenuCard = true
                     } label: {
                         Image(systemName: "text.badge.plus")
                             .resizable()

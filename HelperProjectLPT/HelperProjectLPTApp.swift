@@ -12,6 +12,7 @@ struct HelperProjectLPTApp: App {
     var body: some Scene {
         WindowGroup {
             AssessmentListView()
+                .environmentObject(GetApiData())
         }
     }
 }
