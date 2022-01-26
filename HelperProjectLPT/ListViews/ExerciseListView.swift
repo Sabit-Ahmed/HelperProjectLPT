@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExerciseListView: View {
-    
+    @EnvironmentObject var apiData: GetApiData
     @Environment(\.presentationMode) var presentationMode
     var exerciseList = ["Exercise 1","Exercise 2","Exercise 3","Exercise 4","Exercise 5","Exercise 6"]
     
@@ -16,22 +16,31 @@ struct ExerciseListView: View {
         
         VStack(alignment: .leading) {
             
-            RectangleCardUpper()
-            
-            Text("Exercise List")
-                .bold()
-                .font(.title)
-                .padding(.leading, 15)
-            
-            ScrollView {
-                
-                LazyVStack(spacing: 0) {
-                    ForEach(exerciseList, id: \.self) { exercise in
-                        ExerciseRowView()
-                    }
+            ZStack(alignment: .leading) {
+                VStack {
+                    RectangleCardUpper()
                     
+                    Text("Exercise List")
+                        .bold()
+                        .font(.title)
+                        .padding(.leading, 15)
+                    
+                    ScrollView {
+                        
+                        LazyVStack(spacing: 0) {
+                            ForEach(exerciseList, id: \.self) { exercise in
+                                ExerciseRowView()
+                            }
+                            
+                        }
+                        .padding(.vertical)
+                    }
                 }
-                .padding(.vertical)
+                
+                if apiData.showMenuCard == true {
+                    MenuCard()
+                        
+                }
             }
         }
 //        .navigationTitle("title")
