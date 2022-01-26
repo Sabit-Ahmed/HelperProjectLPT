@@ -13,21 +13,19 @@ struct RectangleCardUpper: View {
             RectangleCard()
                 .frame(height: 180)
             
-            VStack(spacing: 15) {
-                HStack {
-                    Spacer()
-                    Image(systemName: "list.bullet")
+            VStack(alignment: .leading, spacing: 15) {
+                HStack (spacing: 30) {
+                    Image(systemName: "text.badge.plus")
                         .resizable()
-                        .frame(width: 20, height: 20)
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
                         .foregroundColor(.white)
                     
-                    Spacer()
                     Text("EMMA Virtual Therapist")
                         .font(.system(size: 25))
                         .foregroundColor(.white)
-                        
-                    Spacer()
                 }
+                .padding(5)
                 
                 HStack(spacing: 15) {
                     Image(systemName: "person.circle.fill")
@@ -55,13 +53,10 @@ struct RectangleCardUpper: View {
                     
                 }
                 
-                
-                
             }
-            .padding(5)
             
         }
-
+        
     }
 }
 
