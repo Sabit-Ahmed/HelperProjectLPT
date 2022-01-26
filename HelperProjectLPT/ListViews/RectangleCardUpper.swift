@@ -15,11 +15,16 @@ struct RectangleCardUpper: View {
             
             VStack(alignment: .leading, spacing: 15) {
                 HStack (spacing: 30) {
-                    Image(systemName: "text.badge.plus")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 25, height: 25)
-                        .foregroundColor(.white)
+                    Button {
+                        //
+                    } label: {
+                        Image(systemName: "text.badge.plus")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25)
+                            .foregroundColor(.white)
+                    }
+
                     
                     Text("EMMA Virtual Therapist")
                         .font(.system(size: 25))

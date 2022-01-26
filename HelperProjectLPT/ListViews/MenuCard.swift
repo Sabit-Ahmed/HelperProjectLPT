@@ -60,12 +60,17 @@ struct MenuCard: View {
 
 @ViewBuilder
 func iconView() -> some View {
-    Image(systemName: "text.badge.minus")
-        .resizable()
-        .scaledToFit()
-        .frame(width: 35, height: 35, alignment: .leading)
-        .foregroundColor(.white)
-        .padding()
+    Button {
+        //
+    } label: {
+        Image(systemName: "text.badge.minus")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 35, height: 35, alignment: .leading)
+            .foregroundColor(.white)
+            .padding()
+    }
+
 }
 
 
