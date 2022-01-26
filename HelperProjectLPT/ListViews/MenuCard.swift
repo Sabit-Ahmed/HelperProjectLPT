@@ -13,50 +13,54 @@ struct MenuCard: View {
     
     var body: some View {
         
-        VStack(spacing: 0) {
-            ZStack {
-                
-                RectangleCard()
-                
-                VStack {
+        HStack(spacing: 0) {
+            VStack(spacing: 0) {
+                ZStack {
                     
-                    Image(systemName: "lightbulb.slash.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 150, height: 150, alignment: .center)
-                        .foregroundColor(.white)
-                        .padding()
+                    RectangleCard()
                     
-                    Text("MyMedicalHUB")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding(5)
+                    VStack {
+                        
+                        Image(systemName: "lightbulb.slash.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 150, height: 150, alignment: .center)
+                            .foregroundColor(.white)
+                            .padding()
+                        
+                        Text("MyMedicalHUB")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .padding(5)
+                        
+                        Text("I'm EMMA.")
+                            .foregroundColor(.white)
+                        
+                        Text("Your personal exercise assistant.")
+                            .foregroundColor(.white)
+                        
+                        Text("Version: 0.0.1")
+                            .foregroundColor(.white)
+                    }
+                        
                     
-                    Text("I'm EMMA.")
-                        .foregroundColor(.white)
-                    
-                    Text("Your personal exercise assistant.")
-                        .foregroundColor(.white)
-                    
-                    Text("Version: 0.0.1")
-                        .foregroundColor(.white)
                 }
-                    
+                .overlay(iconView(), alignment: .topLeading)
                 
+                ZStack(alignment: .topLeading) {
+                    RectangleCard(color: .black)
+                    
+                    Button("Log Out") {
+                        //
+                    }
+                    .foregroundColor(.white)
+                    .padding()
+                }
             }
-            .overlay(iconView(), alignment: .topLeading)
+            .frame(width: 300)
             
-            ZStack(alignment: .topLeading) {
-                RectangleCard(color: .black)
-                
-                Button("Log Out") {
-                    //
-                }
-                .foregroundColor(.white)
-                .padding()
-            }
+            RectangleCard(color: .init(.sRGBLinear, red: 0, green: 0, blue: 0, opacity: 0.2))
         }
-        .frame(width: 300)
     }
     
     @ViewBuilder
