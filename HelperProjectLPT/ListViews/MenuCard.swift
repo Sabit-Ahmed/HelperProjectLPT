@@ -9,51 +9,51 @@ import SwiftUI
 
 struct MenuCard: View {
     var body: some View {
-        GeometryReader { geo in
-            VStack(spacing: 0) {
-                ZStack {
-                    
-                    RectangleCard()
-                    
-                    VStack {
-                        
-                        Image(systemName: "lightbulb.slash.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150, height: 150, alignment: .center)
-                            .foregroundColor(.white)
-                            .padding()
-                        
-                        Text("MyMedicalHUB")
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .padding(5)
-                        
-                        Text("I'm EMMA.")
-                            .foregroundColor(.white)
-                        
-                        Text("Your personal exercise assistant.")
-                            .foregroundColor(.white)
-                        
-                        Text("Version: 0.0.1")
-                            .foregroundColor(.white)
-                    }
-                        
-                    
-                }
-                .overlay(iconView(), alignment: .topLeading)
+        
+        VStack(spacing: 0) {
+            ZStack {
                 
-                ZStack(alignment: .topLeading) {
-                    RectangleCard(color: .black)
+                RectangleCard()
+                
+                VStack {
                     
-                    Button("Log Out") {
-                        //
-                    }
-                    .foregroundColor(.white)
-                    .padding()
+                    Image(systemName: "lightbulb.slash.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150, alignment: .center)
+                        .foregroundColor(.white)
+                        .padding()
+                    
+                    Text("MyMedicalHUB")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .padding(5)
+                    
+                    Text("I'm EMMA.")
+                        .foregroundColor(.white)
+                    
+                    Text("Your personal exercise assistant.")
+                        .foregroundColor(.white)
+                    
+                    Text("Version: 0.0.1")
+                        .foregroundColor(.white)
                 }
+                    
+                
+            }
+            .overlay(iconView(), alignment: .topLeading)
+            
+            ZStack(alignment: .topLeading) {
+                RectangleCard(color: .black)
+                
+                Button("Log Out") {
+                    //
+                }
+                .foregroundColor(.white)
+                .padding()
             }
         }
+        
     }
 }
 

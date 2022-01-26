@@ -30,7 +30,7 @@ struct RectangleCardUpper: View {
                         .font(.system(size: 25))
                         .foregroundColor(.white)
                 }
-                .padding(5)
+                
                 
                 HStack(spacing: 15) {
                     Image(systemName: "person.circle.fill")
