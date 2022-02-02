@@ -13,6 +13,7 @@ struct ExerciseListView: View {
     @EnvironmentObject var apiData: GetApiData
     @Environment(\.presentationMode) var presentationMode
     var exerciseList = ["Exercise 1","BExercise 2","CExercise 3","ZExercise 4","DExercise 5","Exercise 6"]
+    var testDate: String = "2021-05-25T13:11:20.08.61"
     
     var body: some View {
         
@@ -22,12 +23,27 @@ struct ExerciseListView: View {
                 VStack(alignment: .leading) {
                     RectangleCardUpper()
                     
-                    Text("Exercise List")
-                        .bold()
-                        .font(.title)
-                        .padding(.leading, 15)
                     
-                    
+                    HStack {
+                        
+                        Text("Home Exercises")
+                            .bold()
+                            .font(.system(size: 25))
+                            
+                        Spacer()
+                        VStack(alignment: .trailing) {
+                            Text("TEST-16643")
+                                .bold()
+                                .font(.system(size: 20))
+                                
+                            
+                            Text(splitDateString(testDate: self.testDate))
+                                .foregroundColor(.gray)
+                                .font(.system(size: 15))
+                        }
+                        
+                    }
+                    .padding(.horizontal)
                     
                     ScrollView {
                         
@@ -119,6 +135,10 @@ struct ExerciseListView: View {
                 .padding(5)
             }
         }
+    }
+    
+    func splitDateString(testDate: String) -> Substring {
+        return testDate.split(separator: "T")[0]
     }
     
 }
