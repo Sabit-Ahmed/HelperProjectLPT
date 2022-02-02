@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExerciseRowView: View {
-    
+    var exercise: String
     @State var isManualTrackingShowed: Bool = false
     
     var body: some View {
@@ -43,7 +43,7 @@ struct ExerciseRowView: View {
                         
                         VStack(alignment: .leading, spacing: 5) {
                             
-                            Text("Exercise Title")
+                            Text("\(exercise)")
                                 .bold()
                                 .padding(.vertical, 5)
                             
@@ -131,6 +131,6 @@ struct ExerciseRowView: View {
 
 struct ExerciseRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseRowView()
+        ExerciseRowView(exercise: "Body Squats")
     }
 }
