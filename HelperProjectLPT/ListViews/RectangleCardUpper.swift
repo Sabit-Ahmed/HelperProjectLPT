@@ -12,7 +12,7 @@ struct RectangleCardUpper: View {
     @EnvironmentObject var apiData: GetApiData
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .leading) {
             RectangleCard()
                 .frame(height: 180)
             
@@ -63,8 +63,9 @@ struct RectangleCardUpper: View {
                 }
                 
             }
-            
+            .padding(.horizontal, 25)
         }
+        
         
     }
 }
