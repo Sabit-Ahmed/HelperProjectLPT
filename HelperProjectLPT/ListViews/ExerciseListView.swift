@@ -24,24 +24,28 @@ struct ExerciseListView: View {
                     RectangleCardUpper()
                     
                     
-                    HStack {
-                        
-                        Text("Home Exercises")
-                            .bold()
-                            .font(.system(size: 25))
+                    VStack(alignment: .leading) {
+                        HStack {
                             
-                        Spacer()
-                        VStack(alignment: .trailing) {
-                            Text("TEST-16643")
+                            Text("Home Exercises")
                                 .bold()
-                                .font(.system(size: 20))
+                                .font(.system(size: 25))
                                 
+                            Spacer()
+                            VStack(alignment: .trailing) {
+                                Text("TEST-16643")
+                                    .bold()
+                                    .font(.system(size: 20))
+                                    
+                                
+                                Text(splitDateString(testDate: self.testDate))
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 15))
+                            }
                             
-                            Text(splitDateString(testDate: self.testDate))
-                                .foregroundColor(.gray)
-                                .font(.system(size: 15))
                         }
                         
+                        searchViewLong()
                     }
                     .padding(.horizontal)
                     
@@ -53,8 +57,8 @@ struct ExerciseListView: View {
                                 ExerciseRowView(exercise: exercise)
                             }
                         }
-//                        .searchable(text: $searchString)
-                        .padding(.vertical)
+                        .searchable(text: $searchString)
+                        
                     }
                     
                 }
@@ -87,14 +91,14 @@ struct ExerciseListView: View {
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
-                searchView()
+                searchViewShort()
             }
         }
     }
     
     
     @ViewBuilder
-    func searchView() -> some View {
+    func searchViewShort() -> some View {
         ZStack {
             if isSearchBarTapped == true {
                 HStack {
@@ -128,6 +132,54 @@ struct ExerciseListView: View {
                         .foregroundColor(.darkShadow)
                     
 //                                TextField("Search", text: $searchString)
+                }
+                .onTapGesture {
+                    isSearchBarTapped = true
+                }
+                .padding(5)
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func searchViewLong() -> some View {
+        ZStack {
+            if isSearchBarTapped == true {
+                HStack {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.darkShadow)
+                        
+                        TextField("Search", text: $searchString)
+                        
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(.gray)
+                            .onTapGesture {
+                                searchString = ""
+                            }
+                    }
+                    
+                    .padding(.horizontal, 5)
+                    .padding(.vertical, 5)
+                    .foregroundColor(.neumorphictextColor)
+                    .background(Color.background)
+                    .cornerRadius(10)
+                    .frame(width: UIScreen.main.bounds.width / 2)
+                    
+                    Text("Cancel")
+                        .foregroundColor(.blue)
+                        .onTapGesture {
+                            isSearchBarTapped = false
+                            searchString = ""
+                        }
+                }
+            }
+            else {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.darkShadow)
+                    
+                    TextField("Search", text: $searchString)
                 }
                 .onTapGesture {
                     isSearchBarTapped = true
