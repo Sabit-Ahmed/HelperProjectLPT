@@ -164,7 +164,7 @@ struct ExerciseListView: View {
                     .foregroundColor(.neumorphictextColor)
                     .background(Color.background)
                     .cornerRadius(10)
-                    .frame(width: UIScreen.main.bounds.width / 2)
+                    .frame(width: UIScreen.main.bounds.width / 3)
                     
                     Text("Cancel")
                         .foregroundColor(.blue)
