@@ -58,8 +58,7 @@ struct MenuCard: View {
                     .padding()
                 }
             }
-            .frame(width: self.width)
-            
+            .frame(width: self.width > 300 ? self.width : 300)
             
             RectangleCard(color: .init(.sRGBLinear, red: 0, green: 0, blue: 0, opacity: 0.2))
                 .onTapGesture {
