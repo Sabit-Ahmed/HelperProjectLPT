@@ -10,6 +10,7 @@ import SwiftUI
 struct MenuCard: View {
     
     @EnvironmentObject var apiData: GetApiData
+    private let width = UIScreen.main.bounds.width - UIScreen.main.bounds.width * 2 / 3
     
     var body: some View {
         
@@ -45,7 +46,7 @@ struct MenuCard: View {
                         
                     
                 }
-                .overlay(iconView(), alignment: .topLeading)
+                
                 
                 ZStack(alignment: .topLeading) {
                     RectangleCard(color: .black)
@@ -57,9 +58,13 @@ struct MenuCard: View {
                     .padding()
                 }
             }
-            .frame(width: 300)
+            .frame(width: self.width)
+            
             
             RectangleCard(color: .init(.sRGBLinear, red: 0, green: 0, blue: 0, opacity: 0.2))
+                .onTapGesture {
+                    self.apiData.showMenuCard = false
+                }
         }
     }
     

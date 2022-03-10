@@ -13,6 +13,7 @@ struct HelperProjectLPTApp: App {
         WindowGroup {
             AssessmentListView()
                 .environmentObject(GetApiData())
+                .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }
