@@ -12,7 +12,7 @@ struct ExerciseListView: View {
     @State var isSearchBarTapped: Bool = false
     @EnvironmentObject var apiData: GetApiData
     @Environment(\.presentationMode) var presentationMode
-    var exerciseList = ["Exercise 1","BExercise 2","CExercise 3","ZExercise 4","DExercise 5","Exercise 6"]
+    var exerciseList = ["Exercise 1","BExercise 2asdsdsddsdsdaswwadds","CExercise 3","ZExercise 4","DExercise 5","Exercise 6"]
     var testDate: String = "2021-05-25T13:11:20.08.61"
     
     var body: some View {

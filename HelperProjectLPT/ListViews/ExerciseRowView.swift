@@ -46,12 +46,15 @@ struct ExerciseRowView: View {
                             Text("\(exercise)")
                                 .bold()
                                 .padding(.vertical, 5)
+                                .multilineTextAlignment(.leading)
+                                .lineLimit(3)
                             
                             Text("Assigned set: 0")
                             
                             Text("Assigned repetition: 10")
                              
                         }
+                        .frame(width: 300, height: 120, alignment: .leading)
                         .padding(10)
                         
                        
@@ -131,6 +134,6 @@ struct ExerciseRowView: View {
 
 struct ExerciseRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseRowView(exercise: "Body Squats")
+        ExerciseRowView(exercise: "Body Squats asdasd2asdsdsdsdadsdasdsdsdasdsdasdfasffdffff")
     }
 }
