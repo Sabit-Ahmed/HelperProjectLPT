@@ -22,7 +22,7 @@ struct ExerciseRowView: View {
             
             
             ZStack(alignment: .topTrailing) {
-                VStack {
+                VStack(alignment: .leading) {
                     
                     HStack (spacing: 15) {
                         
@@ -58,9 +58,9 @@ struct ExerciseRowView: View {
                     }
                     .padding(.horizontal, 10)
                     
-                    HStack {
+                    HStack(spacing: 25) {
                         
-                        Spacer()
+                        
                         VStack {
                             NavigationLink(destination: UIKitView(),
                                            label: {
@@ -78,7 +78,7 @@ struct ExerciseRowView: View {
                             })
                         }
                         
-                        Spacer()
+                        
                         VStack {
                             
                             Button {
@@ -103,7 +103,7 @@ struct ExerciseRowView: View {
                             
                         }
                         
-                        Spacer()
+                        
                     }
                 }
                 .padding(.vertical, 20)

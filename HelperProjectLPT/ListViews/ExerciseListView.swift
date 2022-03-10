@@ -51,7 +51,7 @@ struct ExerciseListView: View {
                     
                     ScrollView {
                         
-                        LazyVStack(spacing: 0) {
+                        LazyVStack(alignment: .leading, spacing: 0) {
                             ForEach(searchString == "" ? exerciseList: exerciseList.filter { $0.contains(searchString)},
                                     id: \.self) { exercise in
                                 ExerciseRowView(exercise: exercise)
