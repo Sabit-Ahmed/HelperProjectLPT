@@ -47,10 +47,8 @@ struct AssessmentListView: View {
                         .padding(.vertical)
                     }
                 }
-                
-                if apiData.showMenuCard == true {
+                .sheet(isPresented: $apiData.showMenuCard) {
                     MenuCard()
-                        
                 }
             }
         }
