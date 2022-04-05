@@ -59,7 +59,7 @@ struct AssessmentListView: View {
                 
                 if apiData.showMenuCard == true {
                     MenuCard()
-                        .transition(.slide)
+                        .transition(.backslide)
                 }
             }
         }
@@ -113,6 +113,13 @@ struct AssessmentListView: View {
             }
         }
     }
+}
+
+extension AnyTransition {
+    static var backslide: AnyTransition {
+        AnyTransition.asymmetric(
+            insertion: .move(edge: .leading),
+            removal: .move(edge: .leading))}
 }
 
 struct AssignmentListView_Previews: PreviewProvider {
