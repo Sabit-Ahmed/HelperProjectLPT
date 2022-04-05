@@ -47,10 +47,19 @@ struct AssessmentListView: View {
                         .padding(.vertical)
                     }
                 }
+                .disabled(apiData.showMenuCard)
+                .opacity(apiData.showMenuCard ? 0.7 : 1)
+                .onTapGesture {
+                    withAnimation {
+                        if apiData.showMenuCard == true {
+                            apiData.showMenuCard = false
+                        }
+                    }
+                }
                 
                 if apiData.showMenuCard == true {
                     MenuCard()
-                        
+                        .transition(.slide)
                 }
             }
         }

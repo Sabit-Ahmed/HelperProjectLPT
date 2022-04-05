@@ -20,7 +20,9 @@ struct RectangleCardUpper: View {
                 HStack (spacing: 30) {
                     Button {
                         // Show MenuCard
-                        apiData.showMenuCard = true
+                        withAnimation {
+                            apiData.showMenuCard = true
+                        }
                     } label: {
                         Image(systemName: "text.badge.plus")
                             .resizable()

@@ -14,57 +14,53 @@ struct MenuCard: View {
     
     var body: some View {
         
-        HStack(spacing: 0) {
-            VStack(spacing: 0) {
-                ZStack {
-                    
-                    RectangleCard()
-                    
-                    VStack {
-                        
-                        Image(systemName: "lightbulb.slash.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150, height: 150, alignment: .center)
-                            .foregroundColor(.white)
-                            .padding()
-                        
-                        Text("MyMedicalHUB")
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .padding(5)
-                        
-                        Text("I'm EMMA.")
-                            .foregroundColor(.white)
-                        
-                        Text("Your personal exercise assistant.")
-                            .foregroundColor(.white)
-                        
-                        Text("Version: 0.0.1")
-                            .foregroundColor(.white)
-                    }
-                        
-                    
-                }
+    
+        VStack(spacing: 0) {
+            ZStack {
                 
+                RectangleCard()
                 
-                ZStack(alignment: .topLeading) {
-                    RectangleCard(color: .black)
+                VStack {
                     
-                    Button("Log Out") {
-                        //
-                    }
-                    .foregroundColor(.white)
-                    .padding()
+                    Image(systemName: "lightbulb.slash.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150, alignment: .center)
+                        .foregroundColor(.white)
+                        .padding()
+                    
+                    Text("MyMedicalHUB")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .padding(5)
+                    
+                    Text("I'm EMMA.")
+                        .foregroundColor(.white)
+                    
+                    Text("Your personal exercise assistant.")
+                        .foregroundColor(.white)
+                    
+                    Text("Version: 0.0.1")
+                        .foregroundColor(.white)
                 }
+                    
+                
             }
-            .frame(width: self.width > 300 ? self.width : 300)
             
-            RectangleCard(color: .init(.sRGBLinear, red: 0, green: 0, blue: 0, opacity: 0.2))
-                .onTapGesture {
-                    self.apiData.showMenuCard = false
+            
+            ZStack(alignment: .topLeading) {
+                RectangleCard(color: .black)
+                
+                Button("Log Out") {
+                    //
                 }
+                .foregroundColor(.white)
+                .padding()
+            }
         }
+        .frame(width: self.width > 300 ? self.width : 300)
+            
+        
     }
     
     @ViewBuilder
