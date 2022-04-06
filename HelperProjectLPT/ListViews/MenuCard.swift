@@ -10,7 +10,7 @@ import SwiftUI
 struct MenuCard: View {
     
     @EnvironmentObject var apiData: GetApiData
-    private let width = UIScreen.main.bounds.width - UIScreen.main.bounds.width * 2 / 3
+    private let width = UIScreen.main.bounds.width - UIScreen.main.bounds.width * 1 / 3
     
     var body: some View {
         
@@ -58,7 +58,7 @@ struct MenuCard: View {
                 .padding()
             }
         }
-        .frame(width: self.width > 300 ? self.width : 300)
+        .frame(width: self.width)
             
         
     }
