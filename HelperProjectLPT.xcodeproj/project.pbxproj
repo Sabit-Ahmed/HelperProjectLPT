@@ -23,6 +23,7 @@
 		235911B6277C76B20068B29D /* ToastViewDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235911B5277C76B20068B29D /* ToastViewDemo2.swift */; };
 		237924C8275512A4008E7650 /* ExerciseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C7275512A4008E7650 /* ExerciseRowView.swift */; };
 		237924CA2755133D008E7650 /* UIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237924C92755133D008E7650 /* UIKitView.swift */; };
+		237D209E27FD931A0086092F /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 237D209D27FD931A0086092F /* URLImage */; };
 		2387848A27AA80D900F58507 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387848927AA80D900F58507 /* SearchView.swift */; };
 		23A40D2327A157C0006FC066 /* MenuCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40D2227A157C0006FC066 /* MenuCard.swift */; };
 		23A40D2627A17F02006FC066 /* GetApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40D2527A17F02006FC066 /* GetApiData.swift */; };
@@ -59,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				235911B4277C769A0068B29D /* SSToastMessage in Frameworks */,
+				237D209E27FD931A0086092F /* URLImage in Frameworks */,
 				235911B1277C6C470068B29D /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +185,7 @@
 			packageProductDependencies = (
 				235911B0277C6C470068B29D /* AlertToast */,
 				235911B3277C769A0068B29D /* SSToastMessage */,
+				237D209D27FD931A0086092F /* URLImage */,
 			);
 			productName = HelperProjectLPT;
 			productReference = 232598412755120800BF3018 /* HelperProjectLPT.app */;
@@ -215,6 +218,7 @@
 			packageReferences = (
 				235911AF277C6C470068B29D /* XCRemoteSwiftPackageReference "AlertToast" */,
 				235911B2277C769A0068B29D /* XCRemoteSwiftPackageReference "SSToastMessage" */,
+				237D209C27FD931A0086092F /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = 232598422755120800BF3018 /* Products */;
 			projectDirPath = "";
@@ -479,6 +483,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		237D209C27FD931A0086092F /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -491,6 +503,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 235911B2277C769A0068B29D /* XCRemoteSwiftPackageReference "SSToastMessage" */;
 			productName = SSToastMessage;
+		};
+		237D209D27FD931A0086092F /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 237D209C27FD931A0086092F /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
