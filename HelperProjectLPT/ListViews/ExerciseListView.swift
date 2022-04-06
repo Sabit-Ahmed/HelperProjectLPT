@@ -63,6 +63,10 @@ struct ExerciseListView: View {
                     
                 }
                 
+                if apiData.isStartButtonClicked == true {
+                    ImageSliderView()
+                }
+                
                 if apiData.showMenuCard == true {
                     MenuCard()
                         

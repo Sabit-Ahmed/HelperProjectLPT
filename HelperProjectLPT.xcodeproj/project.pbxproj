@@ -11,6 +11,7 @@
 		232598472755120800BF3018 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232598462755120800BF3018 /* ExerciseListView.swift */; };
 		232598492755120900BF3018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232598482755120900BF3018 /* Assets.xcassets */; };
 		2325984C2755120900BF3018 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2325984B2755120900BF3018 /* Preview Assets.xcassets */; };
+		2327726A27FD747C00A48829 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2327726927FD747C00A48829 /* ImageSliderView.swift */; };
 		23578CF12756516F00260FC0 /* RectangleCardUpper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF02756516F00260FC0 /* RectangleCardUpper.swift */; };
 		23578CF32756520F00260FC0 /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF22756520F00260FC0 /* RectangleCard.swift */; };
 		23578CF52756688B00260FC0 /* RectangleCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23578CF42756688B00260FC0 /* RectangleCardRow.swift */; };
@@ -35,6 +36,7 @@
 		232598462755120800BF3018 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
 		232598482755120900BF3018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2325984B2755120900BF3018 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2327726927FD747C00A48829 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		23578CF02756516F00260FC0 /* RectangleCardUpper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardUpper.swift; sourceTree = "<group>"; };
 		23578CF22756520F00260FC0 /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 		23578CF42756688B00260FC0 /* RectangleCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardRow.swift; sourceTree = "<group>"; };
@@ -84,9 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				232598442755120800BF3018 /* HelperProjectLPTApp.swift */,
-				237924C92755133D008E7650 /* UIKitView.swift */,
+				2327726627FD737400A48829 /* CardView */,
+				2327726527FD736C00A48829 /* RowView */,
 				23BA6A932757AF9400867FA3 /* ListViews */,
+				2327726827FD73CD00A48829 /* PageView */,
 				23A40D2427A17EE8006FC066 /* ViewModel */,
+				2327726B27FD74CE00A48829 /* Resources */,
 				2325984A2755120900BF3018 /* Preview Content */,
 				235911AD277C6B1C0068B29D /* ToastViewDemo.swift */,
 				235911B5277C76B20068B29D /* ToastViewDemo2.swift */,
@@ -103,6 +108,45 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2327726527FD736C00A48829 /* RowView */ = {
+			isa = PBXGroup;
+			children = (
+				23578CFA2756713100260FC0 /* AssessmentRowView.swift */,
+				237924C7275512A4008E7650 /* ExerciseRowView.swift */,
+			);
+			path = RowView;
+			sourceTree = "<group>";
+		};
+		2327726627FD737400A48829 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				2387848927AA80D900F58507 /* SearchView.swift */,
+				23A40D2227A157C0006FC066 /* MenuCard.swift */,
+				23578CF22756520F00260FC0 /* RectangleCard.swift */,
+				23578CF42756688B00260FC0 /* RectangleCardRow.swift */,
+				23578CF02756516F00260FC0 /* RectangleCardUpper.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
+		2327726827FD73CD00A48829 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				23CBC26627995FB20017B18E /* ManualTrackingView.swift */,
+				23CBC2702799AA820017B18E /* InstructionView.swift */,
+				237924C92755133D008E7650 /* UIKitView.swift */,
+				2327726927FD747C00A48829 /* ImageSliderView.swift */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		2327726B27FD74CE00A48829 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		23A40D2427A17EE8006FC066 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,17 +158,8 @@
 		23BA6A932757AF9400867FA3 /* ListViews */ = {
 			isa = PBXGroup;
 			children = (
-				23578CF22756520F00260FC0 /* RectangleCard.swift */,
-				23578CF42756688B00260FC0 /* RectangleCardRow.swift */,
-				23578CF02756516F00260FC0 /* RectangleCardUpper.swift */,
-				23578CFA2756713100260FC0 /* AssessmentRowView.swift */,
 				23578CF62756710B00260FC0 /* AssessmentListView.swift */,
-				237924C7275512A4008E7650 /* ExerciseRowView.swift */,
 				232598462755120800BF3018 /* ExerciseListView.swift */,
-				23CBC26627995FB20017B18E /* ManualTrackingView.swift */,
-				23CBC2702799AA820017B18E /* InstructionView.swift */,
-				23A40D2227A157C0006FC066 /* MenuCard.swift */,
-				2387848927AA80D900F58507 /* SearchView.swift */,
 			);
 			path = ListViews;
 			sourceTree = "<group>";
@@ -218,6 +253,7 @@
 				235911B6277C76B20068B29D /* ToastViewDemo2.swift in Sources */,
 				23CBC26727995FB20017B18E /* ManualTrackingView.swift in Sources */,
 				232598452755120800BF3018 /* HelperProjectLPTApp.swift in Sources */,
+				2327726A27FD747C00A48829 /* ImageSliderView.swift in Sources */,
 				23A40D2627A17F02006FC066 /* GetApiData.swift in Sources */,
 				2387848A27AA80D900F58507 /* SearchView.swift in Sources */,
 				237924CA2755133D008E7650 /* UIKitView.swift in Sources */,

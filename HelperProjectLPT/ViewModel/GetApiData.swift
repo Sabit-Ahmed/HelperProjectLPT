@@ -10,4 +10,5 @@ import Foundation
 class GetApiData: ObservableObject {
     
     @Published var showMenuCard: Bool = false
+    @Published var isStartButtonClicked: Bool = false
 }
